@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 const allowedOrigins = ['http://localhost:5173', 'https://projectmentor-ai.web.app'];
-app.use(cors({
-  origin: (origin, callback) => {
+const corsOptions = {
+  origin: (origin: any, callback: any) => {
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) === -1) {
@@ -25,7 +25,10 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
   optionsSuccessStatus: 200
-}));
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Enable preflight across the board
 app.use(express.json({ limit: '1mb' })); // Limit payload size for security
 
 // Routes
