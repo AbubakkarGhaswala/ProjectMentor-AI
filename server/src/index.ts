@@ -28,7 +28,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // Enable preflight across the board
 app.use(express.json({ limit: '1mb' })); // Limit payload size for security
 
 // Routes
