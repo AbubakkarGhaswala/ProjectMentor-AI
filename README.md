@@ -377,6 +377,8 @@ ProjectMentor AI was developed for:
 
 The project was built around the challenge of creating an AI-powered platform that helps final-year students generate project ideas and provides guidance on features, technologies, development steps, and improvements.
 
+📜 [View Participation Certificate](./certificates/PromptWars-Participation-Certificate.pdf)
+
 ---
 
 # 🚀 Future Improvements
